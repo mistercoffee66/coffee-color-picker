@@ -1,0 +1,37 @@
+#wrapper {
+	position: relative;
+}
+#content {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 150px;
+	height: 150px;
+	background: blue;
+	/*-webkit-transition: all 200ms linear;*/
+}
+#content.animate {
+	-webkit-animation: animation1 5s 2 forwards;
+}
+
+@-webkit-keyframes animation1 {
+    0% {
+            -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 1);
+		}
+    2% {
+            left: 0;
+            -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 1);
+		}
+    4% {
+            left: 250px;
+            -webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1);
+		}
+    50% {
+            left: 250px;
+            -webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1);
+		}
+    100% {
+            left: 250px;
+            top: 250px;
+		}
+}
